@@ -52,7 +52,7 @@ mysql -h${PDA_DB_HOST} -u${PDA_DB_USER} -p${PDA_DB_PASSWORD} ${PDA_DB_NAME} -e "
 echo "===> Assets management"
 echo "---> Running Yarn"
 chown -R www-data:www-data /powerdns-admin/app/static
-chown -R www-data:www-data /powerdns-admin/node_modules
+#chown -R www-data:www-data /powerdns-admin/node_modules
 su -s /bin/bash -c 'yarn install --pure-lockfile' www-data
 
 echo "---> Running Flask assets"
